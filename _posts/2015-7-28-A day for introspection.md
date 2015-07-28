@@ -6,4 +6,7 @@ title: It's time to introspect!
 I have moved on from Wordpress to here as I found myself very cluttered in that place. Github appears more like a cozy and homely place to reside! :)
 
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+
+It had been quite a day today. I fought myself over setting up this blog as a place to write off my mental ramblings. I hope I stick to this one though.
+
+Anyways, the earth shattering news of Kalam's expiry yesterday while giving his IIM Shillong lecture took me into a state of oblivion of some sorts, that I refused to believe if it's really true.
