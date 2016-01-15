@@ -6,5 +6,7 @@ published: true
 ---
 
 
+
 The places I have worked are:
-![Shogun Machine Learning Toolbox]({{http://www.shogun-toolbox.org/}}//shogun.png)
+![shogun.png]({{site.baseurl}}/images/shogun.png)
+
