@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Getting_started_with_OpenVX!"
+title: "Getting started with OpenVX!"
 published: true
 ---
+
 
  
 I will try to get you set up with OpenVX sample implementation in your system. The following goes on for Ubuntu(14.04). (Though it should work for any unix based system.)
@@ -26,8 +27,3 @@ To see that this sample implementation has been configured properly, go to proje
 
 Most of the tests should pass without any problems! Yayy, you are now ready to develop code using the OpenVX API. 
 In my next posts, I will show you how to write a sample code there.
-
-
-
-
-
