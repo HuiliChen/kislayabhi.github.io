@@ -5,4 +5,6 @@ permalink: /work/
 published: true
 ---
 
-I have worked at few places.
+
+The places I have worked are:
+![Shogun Machine Learning Toolbox]({{http://www.shogun-toolbox.org/}}//shogun.png)
