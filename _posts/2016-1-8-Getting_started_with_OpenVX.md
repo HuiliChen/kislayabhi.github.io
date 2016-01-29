@@ -2,6 +2,7 @@
 layout: post
 title: "Getting started with OpenVX!"
 published: true
+comments: true
 ---
 
 
