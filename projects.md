@@ -40,8 +40,10 @@ Check these out and write your own! :)
 - Here I developed a parameterized face needed by the Active Appearance Model (AAM), where the variability of shape and texture is captured from a representative training set. PCA on shape and texture is applied to produce the face model which describes the trained faces with a photorealistic quality.Visit ([here](http://kislayvision.com/research/active-appearance-models/)) for more details.
 
 ### Kaggle!
+
 #### How much did it rain 2
 - This was done as a class project under Professor Arindam Banerjee. We took this challenge as it was ongoing at the time of our course of Machine Learning. ( CSCI 5525 at University of Minnesota.)
+
 - Project
     - [Proposal](https://drive.google.com/file/d/0ByM6ForkyNZfeEdNM1dSeDJTakE/view?usp=sharing)
     - [Progress Report](https://drive.google.com/file/d/0ByM6ForkyNZfNXJVamhfRHoyalk/view?usp=sharing)
