@@ -21,7 +21,9 @@ IPython notebooks are a great way to learn python. Herein, I have developed some
 Check these out and write your own! :)
 
 ### IPython Notebooks
+
 #### Automatic Number Plate Recognition
+
 - [Project link](http://nbviewer.jupyter.org/gist/kislayabhi/89b985e5b78a6f56029a/ANPR.ipynb)
 - I wrote this back when I was involved in Google Summer of Code with Shogun Machine Learning toolbox. This system is about detecting automobile license plate in photographs taken between 1-2 meters from a car. It is a robust example showcasing the unification of image processing techniques along with pattern recognition algorithms like SVM and ANN.
 
