@@ -42,9 +42,7 @@ Check these out and write your own! :)
 - [Project link](http://nbviewer.jupyter.org/gist/kislayabhi/0cc4f6e6b625873c15de)
 - Here I developed a parameterized face needed by the Active Appearance Model (AAM), where the variability of shape and texture is captured from a representative training set. PCA on shape and texture is applied to produce the face model which describes the trained faces with a photorealistic quality.Visit ([here](http://kislayvision.com/research/active-appearance-models/)) for more details.
 
-## Kaggle!
-
-### How much did it rain 2
+### How much did it rain 2 [Kaggle]
 
 - This was done as a class project under Professor Arindam Banerjee. We took this Kaggle challenge as it was active at the time of our course of Machine Learning. ( CSCI 5525 at University of Minnesota.)
 
