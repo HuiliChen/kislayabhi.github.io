@@ -189,3 +189,9 @@ Result = PASS
 ```
 
 Done!!
+
+References:
+
+1. <https://www.pugetsystems.com/labs/hpc/NVIDIA-CUDA-with-Ubuntu-16-04-beta-on-a-laptop-if-you-just-cannot-wait-775/>
+2. <https://devtalk.nvidia.com/default/topic/878117/cuda-setup-and-installation/-solved-titan-x-for-cuda-7-5-login-loop-error-ubuntu-14-04-/>
+3. <http://askubuntu.com/questions/451672/installing-and-testing-cuda-in-ubuntu-14-04>
