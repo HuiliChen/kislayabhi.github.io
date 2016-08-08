@@ -36,20 +36,20 @@ $ sudo apt-get --purge remove nvidia-*
 (5.) No need to create an xorg.conf file. If you have one, remove it (assuming you have a fresh OS install).
 
 ```sh
-     $ sudo rm /etc/X11/xorg.conf
+$ sudo rm /etc/X11/xorg.conf
 ```
 
 (6.) Create the `/etc/modprobe.d/blacklist-nouveau.conf` file with the 2 following lines:
 
 ```
-    blacklist nouveau
-    options nouveau modeset=0
+blacklist nouveau
+options nouveau modeset=0
 ```
 
 Then do a
 
 ```sh
-$sudo update-initramfs -u
+$ sudo update-initramfs -u
 ```
 
 (7.) Reboot computer. Nothing should have changed in loading up menu. You should be taken to the login screen. Once there type: Ctrl + Alt + F1, and login to your user. Keep the next commands handy in another machine since now you are in tty.
@@ -57,8 +57,8 @@ $sudo update-initramfs -u
 (8.) In tty:
 
 ```sh
-  cd ~/Downloads/nvidia_installers;
-  sudo service lightdm stop
+cd ~/Downloads/nvidia_installers;
+sudo service lightdm stop
 ```
 
 The top line is a necessary step for installing the driver.
