@@ -63,20 +63,21 @@ $sudo update-initramfs -u
   sudo service lightdm stop
   ```
 The top line is a necessary step for installing the driver.
+
 (9.) [For Ubuntu 14.04]
 
-        ```sh
-        sudo ./NVIDIA-Linux-x86_64-352.39.run --no-opengl-files
-        ```
+```sh
+sudo ./NVIDIA-Linux-x86_64-352.39.run --no-opengl-files
+```
 
-        [For Ubuntu 16.04] --> Download nvidia-367 instead of the default nvidia-352 that comes with the toolkit from here: <http://in.download.nvidia.com/XFree86/Linux-x86_64/367.27/NVIDIA-Linux-x86_64-367.27.run>
-        then do
+[For Ubuntu 16.04] --> Download nvidia-367 instead of the default nvidia-352 that comes with the toolkit from here: <http://in.download.nvidia.com/XFree86/Linux-x86_64/367.27/NVIDIA-Linux-x86_64-367.27.run>
+then do
 
-        ```
-        sudo ./NVIDIA-Linux-x86_64-367.27.run --no-opengl-files
-        ```
+```
+sudo ./NVIDIA-Linux-x86_64-367.27.run --no-opengl-files
+```
 
-        I cannot stress how important is the opengl flag in the above command. If you miss that, either you will get stuck in "login loop" or your computer would boot with a black screen at all times.
+I cannot stress how important is the opengl flag in the above command. If you miss that, either you will get stuck in "login loop" or your computer would boot with a black screen at all times.
 
 (10.) Now install the toolkit also
 
