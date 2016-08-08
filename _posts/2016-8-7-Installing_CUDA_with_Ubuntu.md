@@ -11,24 +11,26 @@ Hey Guys,
 I have spent days if not months installing CUDA 7.0 and CUDA 7.5 in Ubuntu 14.04 and Ubuntu 16.04 over different laptops(Dell and Asus). I finally got them working. While there are numerous tutorials present over the web, most are incomplete and error prone. The difficulty comes in installing the Nvidia drivers. If one does a mistake then the system crashes(since you need Nvidia drivers for Cuda only but not for graphics display. The default settings messes the OpenGL display drivers) and you need to do a fresh install (again there are many messy ways to escape without a fresh install but lets try to make it correct from the start anyways).
 
 Instructions on Ubuntu 16.04/14.04  after a fresh install
+
+
 1. Install build essentials.  
 ```sh
-sudo apt-get install build-essential
+$ sudo apt-get install build-essential
 ```
 
 2.  Go to <https://developer.nvidia.com/cuda-downloads> and download CUDA toolkit 7.5 for Ubuntu 15.04 (No Version supports 16.04 yet) or if you are on Ubuntu 14.04, just choose that. I have tested the 64 bit version but I think the 32 bit will work too if your machine is 32 bit.
 
 3.  Open up a terminal and extract the separate installers via:
 ```sh
-mkdir ~/Downloads/nvidia_installers;
-cd ~/Downloads
-./cuda_7.5.18_linux.run -extract=~/Downloads/nvidia_installers;
+$ mkdir ~/Downloads/nvidia_installers;
+$ cd ~/Downloads
+$ ./cuda_7.5.18_linux.run -extract=~/Downloads/nvidia_installers;
 ```
 
 4.  Completely uninstall anything in the ubuntu repositories with ```"nvidia-*```.
 I used synaptic and did a purge, AKA completely uninstall programs and configuration.
 ```sh
-sudo apt-get --purge remove nvidia-*
+$ sudo apt-get --purge remove nvidia-*
 ```
 5.  No need to create an xorg.conf file. If you have one, remove it (assuming you have a fresh OS install).
 ```sh
