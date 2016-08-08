@@ -11,8 +11,6 @@ Right now:
 - Working on a Nvidia Jetson TX1 GPU. Our Robotics lab has lots of sequential Computer Vision code and I am trying to use the power of CUDA to make them run in real time.
 - Working on problems related to precision agriculture. More information here: [rsn_project_link](http://rsn.cs.umn.edu/index.php/Precision_Agriculture)
 
-
-
 # Past Projects
 
 IPython notebooks are a great way to learn python. Herein, I have developed some lucid notebooks showcasing a mixture of Computer Vision and Machine Learning techniques!
@@ -28,7 +26,7 @@ Check these out and write your own! :)
 
 ### PCA and its application in face recognition
 
-- [Project link](http://www.shogun-toolbox.org/static/notebook/current/pca_notebook.html)
+- [Project link](https://gist.github.com/kislayabhi/9431770#file-pca_notebook-ipynb)
 - Again this was the outcome of a great Summer of Code as mentioned above. This system shows the usage of Principal Component Analysis for general data compression. Its dimensional reduction capabilities are further utilized to show its application in Eigenfaces Face recognition algorithm.
 
 ### Object categorization using SIFT
