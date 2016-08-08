@@ -114,7 +114,7 @@ $ sudo service lightdm start.
 
 You are done if on Ubuntu 14.04 & go to step 17\. If on Ubuntu 16.04, the gcc version is higher than what is supported by any CUDA toolkit right now.
 
-**READ ON FOR UBUNTU 16.04 ONLY** 
+**READ ON FOR UBUNTU 16.04 ONLY**
 
 (15.) Fix/break the header file that doesn't want to let us use gcc > 4.8\. All we are going to do is comment out (//) the error line that drops you out of a build.
 
@@ -133,7 +133,7 @@ $ grep -r nvidia-352 -l --null . | sudo xargs -0 sed -i 's#nvidia-352#nvidia-367
 
 The above command replaces all the places where sample's default nvidia-352 driver was used with nvidia-367
 
-(17.) BOTH 16.04 and 14.04
+(17.) **BOTH 16.04 and 14.04**
 
 ```sh
 $ cd /usr/local/cuda/samples/1_Utilities/deviceQuery
