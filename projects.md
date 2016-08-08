@@ -6,13 +6,12 @@ permalink: /projects/
 
 # Current Projects
 
-Right now I am working on three things.
+Right now:
 
 - Working on a Nvidia Jetson TX1 GPU. Our Robotics lab has lots of sequential Computer Vision code and I am trying to use the power of CUDA to make them run in real time.
+- Working on problems related to precision agriculture. More information here: [rsn_project_link](http://rsn.cs.umn.edu/index.php/Precision_Agriculture)
 
-- Writing a compiler from scratch for the language C-- . Hah! I know you must never have heard about it before but it is very much like C except the pointers. A good way to learn the functioning of Compiler without over complicating it! I am doing this as a class project under Professor Antonia Zhai.
 
-- Writing blog posts and cool C codes [here](https://github.com/kislayabhi/short_scripts)
 
 # Past Projects
 
