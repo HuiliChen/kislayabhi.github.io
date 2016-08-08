@@ -114,7 +114,9 @@ $ sudo service lightdm start.
 
 You are done if on Ubuntu 14.04 & go to step 17\. If on Ubuntu 16.04, the gcc version is higher than what is supported by any CUDA toolkit right now.
 
-READ ON FOR UBUNTU 16.04 ONLY (15.) Fix/break the header file that doesn't want to let us use gcc > 4.8\. All we are going to do is comment out (//) the error line that drops you out of a build.
+**READ ON FOR UBUNTU 16.04 ONLY** 
+
+(15.) Fix/break the header file that doesn't want to let us use gcc > 4.8\. All we are going to do is comment out (//) the error line that drops you out of a build.
 
 ```sh
 $ sudo vim /usr/local/cuda/include/host_config.h
