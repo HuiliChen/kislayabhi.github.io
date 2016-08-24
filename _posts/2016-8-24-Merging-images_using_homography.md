@@ -12,7 +12,7 @@ But! for that you need to understand what a Homography is. Go through section 2.
 To summarize it: Suppose we have two images of the same _planar_ object with some overlap between them. Let p1 be the pixel coordinates [p1x, p1y, 1] of a point in 1st image and p2 be the pixel coordinates [p2x, p2y, 1] of a point in the 2nd image. Let us call the 1st image as the destination image and the 2nd image as the source image. The Homography <sup>1</sup>H<sub>2</sub> relates every pixel coordinate in the 2nd image to a pixel coordinate in the 1st image.
 
 ```math
-p1 = ^1H_2 * p2
+p1 = 1H2 * p2
 ```
 
 If you think of the 1st image in a bigger canvas where everything surrounding it is black (since we don't have data around it), the related pixel coordinates will stick around those black part! Think about this :)
