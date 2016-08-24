@@ -20,4 +20,5 @@ If you think of the 1st image in a bigger canvas where everything surrounding it
 Anyways, I wanted to get started with coding this Homography retrieval using OpenCV in C++. To find the homography between any two source and destination images, we need to have at-lest 4 point to point correspondences. Getting these correspondences are easy if you use some kind of feature detector and match them via their descriptors. Examples of some feature detectors are SIFT, SURF, ORB etc etc. We will stick to SIFT here. They are a bit slow compared to other options but are most accurate.
 
 1. So we start with 2 images. Image 1 is the destination and Image 2 is the source. Both have some overlap between them.
-![Jekyll Now Theme Screenshot](/images/jekyll-now-theme-screenshot.jpg "Jekyll Now Theme Screenshot")
+![Image 1](/images/1.jpg "Destination Image")
+![Image 2](/images/2.jpg "Source Image")
