@@ -15,4 +15,6 @@ To summarize it: Suppose we have two images of the same _planar_ object with som
 p1 = 1H2 * p2
 ```
 
-If you think of the 1st image in a bigger canvas where everything surrounding it is black (since we don't have data around it), the related pixel coordinates will stick around those black part! Think about this :)
+If you think of the 1st image in a bigger canvas where everything surrounding it is black (since we don't have data around it), the related pixel coordinates from the second image will bring in more data and will stick around those black part! Think about this :)
+
+Anyways, I wanted to get started with coding this Homography retrieval using OpenCV in C++. To find the homography between any two source and destination images, we need to have at-lest 4 point to point correspondences. Getting these correspondences are easy if you use some kind of feature detector and match them via their descriptors. Examples of some feature detectors are SIFT, SURF, ORB etc etc. We will stick to SIFT here. They are a bit slow compared to other options but are most accurate.
