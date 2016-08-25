@@ -27,7 +27,7 @@ Anyways, I wanted to get started with coding this Homography retrieval using Ope
 
 ```cpp
 int offsetx = 800;
-int offsety = 2000;
+int offsety = 1000;
 Mat trans_mat = (Mat_<double>(2, 3) << 1, 0, offsetx, 0, 1, offsety);
 warpAffine(im1, im1, trans_mat, Size(3 * im1.cols, 3 * im1.rows));
 ```
@@ -126,4 +126,4 @@ Let's see how im_1 looks now!
 
 TaDa! We have a basic Panorama out here! Now say you have many more images. Then it is better if you write two functions. One for shifting the dest image on the center of a bigger canvas and other for stickig im_2 on im_1 and returning a im_12. Now again run this function for sticking im_3 on im_12 to get im_123 ... zzzz.
 
-I hope you get the idea! If you didn't get it ... er er .. No problems! Here is the code: 
+I hope you get the idea! If you didn't get it ... er er .. No problems! Here is the code:
