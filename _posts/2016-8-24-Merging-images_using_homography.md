@@ -19,11 +19,11 @@ If you think of the 1st image in a bigger canvas where everything surrounding it
 
 Anyways, I wanted to get started with coding this Homography retrieval using OpenCV in C++. To find the homography between any two source and destination images, we need to have at-lest 4 point to point correspondences. Getting these correspondences are easy if you use some kind of feature detector and match them via their descriptors. Examples of some feature detectors are SIFT, SURF, ORB etc etc. We will stick to SIFT here. They are a bit slow compared to other options but are most accurate.
 
-1. So we start with 2 images. Image 1 is the destination and Image 2 is the source. Both have some overlap between them.
+(1.) So we start with 2 images. Image 1 is the destination and Image 2 is the source. Both have some overlap between them.
 ![Image 1](/images/1.jpg "Destination Image")
 ![Image 2](/images/2.jpg "Source Image")
 
-2. As I mentioned previously, we need to think of the destination image on a bigger canvas if we want to stick the pixels from the source image around it. Let's do that.
+(2.) As I mentioned previously, we need to think of the destination image on a bigger canvas if we want to stick the pixels from the source image around it. Let's do that.
 
 ```cpp
 int offsetx = 800;
@@ -34,7 +34,7 @@ warpAffine(im1, im1, trans_mat, Size(3 * im1.cols, 3 * im1.rows));
 The result:
 ![Bigger Canvas Image 1](/images/3.jpg "Bigger Canvas Image")
 
-3. Now we will find the SIFT feature matches between the current bigger canvased image: im_1 and the other image im_2.
+(3.) Now we will find the SIFT feature matches between the current bigger canvased image: im_1 and the other image im_2.
 
 ```cpp
 cv::Ptr<Feature2D> f2d = xfeatures2d::SIFT::create();
@@ -69,7 +69,7 @@ for (int i = 0; i < 200; i++)
 
 ```
 
-4. Now since we have the best 200 SIFT matches between the images, we can find the Homography 1H2. As we know, we need only 4 matches at minimum to find the homography. But using more matches can improve the accuracy if we use RANSAC. RANSAC method try many different random subsets of the corresponding point pairs (of four pairs each), estimate the homography matrix using this subset and a simple least-square algorithm, and then compute the quality/goodness of the computed homography (which is the number of inliers for RANSAC or the median re-projection error for LMeDs). The best subset is then used to produce the initial estimate of the homography matrix and the mask of inliers/outliers.
+(4.) Now since we have the best 200 SIFT matches between the images, we can find the Homography 1H2. As we know, we need only 4 matches at minimum to find the homography. But using more matches can improve the accuracy if we use RANSAC. RANSAC method try many different random subsets of the corresponding point pairs (of four pairs each), estimate the homography matrix using this subset and a simple least-square algorithm, and then compute the quality/goodness of the computed homography (which is the number of inliers for RANSAC or the median re-projection error for LMeDs). The best subset is then used to produce the initial estimate of the homography matrix and the mask of inliers/outliers.
 
 ```cpp
 // 1st image is the destination image and the 2nd image is the src image
