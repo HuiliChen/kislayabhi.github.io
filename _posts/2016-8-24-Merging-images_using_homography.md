@@ -24,6 +24,7 @@ Anyways, I wanted to get started with coding this Homography retrieval using Ope
 ![Image 2](/images/2.jpg "Source Image")
 
 2. As I mentioned previously, we need to think of the destination image on a bigger canvas if we want to stick the pixels from the source image around it. Let's do that.
+
 ```cpp
 int offsetx = 800;
 int offsety = 2000;
