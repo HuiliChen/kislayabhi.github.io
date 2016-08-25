@@ -97,4 +97,11 @@ output:
  -0.0004251711674909509, 1.783961055570689e-05, 1]
 ```
 
-(5.)
+(5.) Now we have the homography. We just need to apply the perspective warp on im_2 on a blank black canvas of the size of im_1. Let's do it!
+
+```cpp
+Mat wim_2;
+warpPerspective(im_2, wim_2, H, im_1.size());
+```
+If you do a imshow on wim_2 i.e the warped image2 according to 1H2, on a bigger canvas, it will look like this:
+![warped_image2_on_bigger_canvas](/images/warped_image2_on_bigger_canvas.jpg "warped image2 on bigger canvas")
