@@ -105,3 +105,21 @@ warpPerspective(im_2, wim_2, H, im_1.size());
 ```
 If you do a imshow on wim_2 i.e the warped image2 according to 1H2, on a bigger canvas, it will look like this:
 ![warped_image2_on_bigger_canvas](/images/warped_image2_on_bigger_canvas.jpg "warped image2 on bigger canvas")
+
+(6.) Most of the things are done now. We just need to merge these two images together. A crude and simple method for this is: *copy all those pixels from the wim_2 to im_1 which are black in im_1.*
+
+In code this will look like:
+
+```cpp
+// We can do this since im_1 and wim_2 have the same size.
+for (int i = 0; i < im_1.cols; i++)
+	for (int j = 0; j < im_1.rows; j++) {
+		Vec3b color_im1 = im_1.at<Vec3b>(Point(i, j));
+		Vec3b color_im2 = wim_2.at<Vec3b>(Point(i, j));
+		if (norm(color_im1) == 0)
+			im_1.at<Vec3b>(Point(i, j)) = color_im2;
+	}
+```
+
+Let's see how im_1 looks now!
+![Panorama Result](/images/pano_result.jpg "panorama result")
