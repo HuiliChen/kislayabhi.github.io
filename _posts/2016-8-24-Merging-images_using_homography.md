@@ -69,6 +69,10 @@ for (int i = 0; i < 200; i++)
 
 ```
 
+The good matches when drawn looks like this:
+![Good Matches](/images/Good_Matches.jpg "Good Matches Image")
+
+
 (4.) Now since we have the best 200 SIFT matches between the images, we can find the Homography 1H2. As we know, we need only 4 matches at minimum to find the homography. But using more matches can improve the accuracy if we use RANSAC. RANSAC method try many different random subsets of the corresponding point pairs (of four pairs each), estimate the homography matrix using this subset and a simple least-square algorithm, and then compute the quality/goodness of the computed homography (which is the number of inliers for RANSAC or the median re-projection error for LMeDs). The best subset is then used to produce the initial estimate of the homography matrix and the mask of inliers/outliers.
 
 ```cpp
@@ -92,3 +96,5 @@ output:
  -0.5652916039380339, 0.9340629651977271, 1045.011078408947;
  -0.0004251711674909509, 1.783961055570689e-05, 1]
 ```
+
+(5.)
