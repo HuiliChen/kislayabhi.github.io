@@ -22,3 +22,13 @@ Anyways, I wanted to get started with coding this Homography retrieval using Ope
 1. So we start with 2 images. Image 1 is the destination and Image 2 is the source. Both have some overlap between them.
 ![Image 1](/images/1.jpg "Destination Image")
 ![Image 2](/images/2.jpg "Source Image")
+
+2. As I mentioned previously, we need to think of the destination image on a bigger canvas if we want to stick the pixels from the source image around it. Let's do that.
+```cpp
+int offsetx = 800;
+int offsety = 2000;
+Mat trans_mat = (Mat_<double>(2, 3) << 1, 0, offsetx, 0, 1, offsety);
+warpAffine(im1, im1, trans_mat, Size(3 * im1.cols, 3 * im1.rows));
+```
+The result:
+![Bigger Canvas Image 1](/images/3.jpg "Bigger Canvas Image")
