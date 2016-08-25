@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Generating basic Panoramas using Homographies
+title: Generating basic Panoramas using Homographies in OpenCV
 published: true
 comments: true
 ---
