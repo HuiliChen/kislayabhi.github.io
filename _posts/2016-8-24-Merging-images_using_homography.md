@@ -33,3 +33,62 @@ warpAffine(im1, im1, trans_mat, Size(3 * im1.cols, 3 * im1.rows));
 ```
 The result:
 ![Bigger Canvas Image 1](/images/3.jpg "Bigger Canvas Image")
+
+3. Now we will find the SIFT feature matches between the current bigger canvased image: im_1 and the other image im_2.
+
+```cpp
+cv::Ptr<Feature2D> f2d = xfeatures2d::SIFT::create();
+
+// Step 1: Detect the keypoints:
+std::vector<KeyPoint> keypoints_1, keypoints_2;
+f2d->detect( im_1, keypoints_1 );
+f2d->detect( im_2, keypoints_2 );
+
+// Step 2: Calculate descriptors (feature vectors)
+Mat descriptors_1, descriptors_2;
+f2d->compute( im_1, keypoints_1, descriptors_1 );
+f2d->compute( im_2, keypoints_2, descriptors_2 );
+
+// Step 3: Matching descriptor vectors using BFMatcher :
+BFMatcher matcher;
+std::vector< DMatch > matches;
+matcher.match( descriptors_1, descriptors_2, matches );
+
+// Keep 200 best matches only.
+// We sort distance between descriptor matches
+Mat index;
+int nbMatch = int(matches.size());
+Mat tab(nbMatch, 1, CV_32F);
+for (int i = 0; i < nbMatch; i++)
+	tab.at<float>(i, 0) = matches[i].distance;
+sortIdx(tab, index, SORT_EVERY_COLUMN + SORT_ASCENDING);
+vector<DMatch> bestMatches;
+
+for (int i = 0; i < 200; i++)
+	bestMatches.push_back(matches[index.at < int > (i, 0)]);
+
+```
+
+4. Now since we have the best 200 SIFT matches between the images, we can find the Homography 1H2. As we know, we need only 4 matches at minimum to find the homography. But using more matches can improve the accuracy if we use RANSAC. RANSAC method try many different random subsets of the corresponding point pairs (of four pairs each), estimate the homography matrix using this subset and a simple least-square algorithm, and then compute the quality/goodness of the computed homography (which is the number of inliers for RANSAC or the median re-projection error for LMeDs). The best subset is then used to produce the initial estimate of the homography matrix and the mask of inliers/outliers.
+
+```cpp
+// 1st image is the destination image and the 2nd image is the src image
+std::vector<Point2f> dst_pts;                   //1st
+std::vector<Point2f> source_pts;                //2nd
+
+for (vector<DMatch>::iterator it = bestMatches.begin(); it != bestMatches.end(); ++it) {
+	//-- Get the keypoints from the good matches
+	dst_pts.push_back( keypoints_1[ it->queryIdx ].pt );
+	source_pts.push_back( keypoints_2[ it->trainIdx ].pt );
+}
+
+Mat H = findHomography( source_pts, dst_pts, CV_RANSAC );
+cout << H << endl;
+```
+output:
+
+```bash
+[0.119035947337248, -0.04651626756941147, 1700.852494625838;
+ -0.5652916039380339, 0.9340629651977271, 1045.011078408947;
+ -0.0004251711674909509, 1.783961055570689e-05, 1]
+```
