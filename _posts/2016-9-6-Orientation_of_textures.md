@@ -18,6 +18,7 @@ Given a texture image or any repeated patterned image, find the general orientat
  For example in the first image above, the orientation should all be angled at 45 degrees while in the second image, the orientation map should give evidence of a zig zag pattern.
 
 I will enumerate 3 methods.
+
 1. Fourier Transform.
 2. Steerable Pyramids.
 3. Histogram of Oriented Gradients.
@@ -60,6 +61,7 @@ For our purpose, we will design a steerable quadrature pair based on the frequen
 ![inphase and quadrature filters](../images/g4_filters.png)
 
 The 4 pairs if written algebraically looks like:
+
 1. ```G2a```+ *i* ```H2a```.
 2. ```G2b```+ *i* ```H2b```.
 3. ```G2c```+ *i* ```H2c```.
@@ -68,6 +70,7 @@ The 4 pairs if written algebraically looks like:
 In the above 4 pairs, you can see that the real part of the 4rth pair is zero and only imaginary part is present.
 
 Steerable filters are useful for many tasks in early vision. In the above mentioned paper, they have used this technique for solving:
+
 1. Orientation and phase analysis.
 2. Angularly adaptive filtering.
 3. Edge detection.
@@ -91,7 +94,7 @@ Instead of generating each of the 7 filters by myself, I was able to able to fin
 
 Download this Toolbox, add it to your path. Now let's code this whole thing.
 
-```octave
+```matlab
 
 clc; close all; clear;
 
@@ -173,7 +176,8 @@ Again, I don't have the computer vision toolbox for Matlab but was able to find 
 Now Download and enable that library by running ```vl_setup.m``` from toolbox folder VLfeat.
 
 Code for visualizing the orientation.
-```octave
+
+```matlab
 
 im = imread('images/weirdangled_stripes1.jpg');
 if(length(size(im))==3)
@@ -201,9 +205,9 @@ The results on the 4 images from the start respectively are:
 
 To just draw the maximum orientation per patch instead of drawing all the 9 orientations (as above), try to sum 1st, 10th, 19th and 28th element of the 36 element HOG descriptor to get the orientation strength of the 1st orientation. (90 deg wrt to positive x axis.) Similary do it for all the 9 orientations. Find which one is maximum and use the angle associated with it. The angle difference between each index is ofcourse ```pi/9```.
 
-angle  |1st element   |2nd element   |3rd element   |4rth element  
---|---|---|-- |--
- ```pi/2``` | 1  | 10  | 19  |  28
+angle  |1st |2nd |3rd |4rth   
+                        --|---|---|-- |--
+ ```pi/2```             | 1  | 10  | 19  |  28
  ```pi/2-1*pi/9``` | 2  | 11  | 20 | 29  
  ```pi/2-2*pi/9``` | 3  | 12  | 21 | 30
  ```pi/2-3*pi/9``` | 4  | 13  | 22 | 31
