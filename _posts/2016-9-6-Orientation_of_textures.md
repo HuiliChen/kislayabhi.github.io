@@ -206,16 +206,16 @@ The results on the 4 images from the start respectively are:
 To just draw the maximum orientation per patch instead of drawing all the 9 orientations (as above), try to sum 1st, 10th, 19th and 28th element of the 36 element HOG descriptor to get the orientation strength of the 1st orientation. (90 deg wrt to positive x axis.) Similary do it for all the 9 orientations. Find which one is maximum and use the angle associated with it. The angle difference between each index is ofcourse ```pi/9```.
 
 |``` angle ```             |``` 1st ``` |``` 2nd ```  |``` 3rd ``` |``` 4rth ```|   
-|-------------------|--- |---  |--- |----|
+|-------------------| ----- |-----  |----- |----|
 | ``` pi/2 ```         | ``` 1 ```  | ``` 10 ```  | ``` 19 ``` | ``` 28 ``` |
-| ``` pi/2-1*pi/9 ``` | ``` 2 ```  | ``` 11 ```  | ``` 20 ``` | ``` 29 ``` |
-| ``` pi/2-2*pi/9 ``` | ``` 3 ```  | ``` 12 ```  | ``` 21 ``` | ``` 30 ``` |
-| ``` pi/2-3*pi/9 ``` | ``` 4 ```  | ``` 13 ```  | ``` 22 ``` | ``` 31 ``` |
-| ``` pi/2-4*pi/9 ``` | ``` 5 ```  | ``` 14 ```  | ``` 23 ``` | ``` 32 ``` |
-| ``` pi/2-5*pi/9 ``` | ``` 6 ```  | ``` 15 ```  | ``` 24 ``` | ``` 33 ``` |
-| ``` pi/2-6*pi/9 ``` | ``` 7 ```  | ``` 16 ```  | ``` 25 ``` | ``` 34 ``` |
-| ``` pi/2-7*pi/9 ``` | ``` 8 ```  | ``` 17 ```  | ``` 26 ``` | ``` 35 ``` |
-| ``` pi/2-8*pi/9 ``` | ``` 9 ```  | ``` 18 ```  | ``` 27 ``` | ``` 36 ``` |
+| ``` pi/2-1*pi/9   ``` | ``` 2 ```  | ``` 11 ```  | ``` 20 ``` | ``` 29 ``` |
+| ``` pi/2-2*pi/9   ``` | ``` 3 ```  | ``` 12 ```  | ``` 21 ``` | ``` 30 ``` |
+| ``` pi/2-3*pi/9   ``` | ``` 4 ```  | ``` 13 ```  | ``` 22 ``` | ``` 31 ``` |
+| ``` pi/2-4*pi/9   ``` | ``` 5 ```  | ``` 14 ```  | ``` 23 ``` | ``` 32 ``` |
+| ``` pi/2-5*pi/9   ``` | ``` 6 ```  | ``` 15 ```  | ``` 24 ``` | ``` 33 ``` |
+| ``` pi/2-6*pi/9   ``` | ``` 7 ```  | ``` 16 ```  | ``` 25 ``` | ``` 34 ``` |
+| ``` pi/2-7*pi/9   ``` | ``` 8 ```  | ``` 17 ```  | ``` 26 ``` | ``` 35 ``` |
+| ``` pi/2-8*pi/9   ``` | ``` 9 ```  | ``` 18 ```  | ``` 27 ``` | ``` 36 ``` |
 
   [01d249e0]: https://lear.inrialpes.fr/people/triggs/pubs/Dalal-cvpr05.pdf "Histograms of Oriented Gradients for Human Detection by Navneet Dalal and Bill Triggs"
   [4609b606]: http://www.vlfeat.org/overview/hog.html "Tutorial on Hog"
