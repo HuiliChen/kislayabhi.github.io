@@ -8,8 +8,18 @@ permalink: /projects/
 
 Right now:
 
-- Working on a Nvidia Jetson TX1 GPU. Our Robotics lab has lots of sequential Computer Vision code and I am trying to use the power of CUDA to make them run in real time.
-- Working on problems related to precision agriculture. More information here: [rsn_project_link](http://rsn.cs.umn.edu/index.php/Precision_Agriculture)
+
+
+
+1. Designed and Implemented a GPU based real time Object Detection system. Here we are using it for apples.
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/dg4KFW_Vbow" frameborder="0" allowfullscreen></iframe>
+
+2. Designed and Implemented a CPU parallelized code for Corn Row orientation detection.
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/vGBq_tOlBNc" frameborder="0" allowfullscreen></iframe>
+
+
 
 # Past Projects
 
