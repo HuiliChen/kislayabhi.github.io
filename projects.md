@@ -11,11 +11,11 @@ Right now:
 
 
 
-1. Designed and Implemented a GPU based real time Object Detection system. Here we are using it for apples.
+1). My GPU based real time Object Detection system. Here we are using it for apples.
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/dg4KFW_Vbow" frameborder="0" allowfullscreen></iframe>
 
-2. Designed and Implemented a CPU parallelized code for Corn Row orientation detection.
+2). My CPU parallelized code for Corn Row orientation detection.
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/vGBq_tOlBNc" frameborder="0" allowfullscreen></iframe>
 
