@@ -29,7 +29,9 @@ The best one is ofcourse the last one, but if you read from the starting one, yo
 This method works best if there is only *one* general orientation in the image. The magnitude of 2d Fourier Transform of the given image will show the direction which is orthogonal to the actual orientation. For example: If you find the 2d fft of the 1st image above and show its magnitude as a grayscale image, you will get something like this:
 
 code in Matlab:
+
 ```matlab
+
 close all; clear;
 
 img = imread('images/angled_stripes.jpg');
