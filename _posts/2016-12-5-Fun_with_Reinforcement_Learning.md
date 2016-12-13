@@ -39,6 +39,7 @@ Get the `carmunk.py` from the above github link and try running it directly, it 
 We just need to remove the blue obstacles and increase the number of sonar sensors to get the target configuration. Also we need to tweak the reward system as originally, Matt trained this for avoiding the obstacles but we want to home in the orange target.
 
 There are only 3 changes we need here:
+
 * In the `class GameState` :
 
 ``` python
@@ -148,10 +149,10 @@ else:
 ...
 ```
 
- Now let us move onto the Tensorflow structure.
+Now let us move onto the Tensorflow structure.
 
- ``` python
 
+``` python
  import tensorflow as tf
  import numpy as np
 
@@ -210,13 +211,13 @@ else:
          return train_op
 
 
- ```
+```
 
  This is a standard neural network structure in Tensorflow. We have 2 hidden layers here. Also, It is important not to fix the size of the input placeholders as sometimes we might need to feed a minibatch of data and sometimes just a single input. For training, instead of using a simple gradient descent based back-propagation, we use RMSPropOptimizer. Check [here](http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf) for an overview of minibatch gradient descent methods.
 
  Now that we have the environment and the function approximator (the NN) ready, it is time to write the Q-learning code for an Agent class.
 
- ```python
+```python
 
  class Agent():
 
@@ -251,11 +252,11 @@ else:
          # Merge all summaries into a single op
          self.merged_summary_op = tf.merge_all_summaries()
 
- ```
+```
 
  So this part covers the parameters that we are using currently. There are 7 sensors so the input to the first layer is 7. Similarly, there is a possibility of only 3 actions which are left rotation + 1 move forward, right rotation + 1 move forward and no rotation but just a move in the forward direction. For this reason, we have 3 neurons in the output layer. The two hidden layers with size 128 and 32 are chosen arbitrarily. The learning rate of 0.01 has worked well for me. The size of the experience buffer is 10000. The minibatch size we use for training is 128. Epsilon provides us information about how much exploration we want with respect to the exploitation (More on exploration vs exploitation later). Also, to see if we are learning well here we need to visualize the time it takes to end per game. Ending a game would mean how fast our agent is able to kill the target. As we learn, we expect this time to decrease. The log files are written in the `self.logs_path` and can be visualized using tensorboard.
 
- ```python
+```python
 # Forward Propagation
 def StoQ_FApprox(self, state):
          return self.sess.run(self.Qout, feed_dict={self.inputs1: state})
@@ -263,7 +264,7 @@ def StoQ_FApprox(self, state):
 # Backward Propagation ~ Training
 def StoQ_FApprox_train(self, current_input, target_output):
         self.sess.run([self.train_op], feed_dict={self.inputs1: current_input, self.nextQ: target_output})
- ```
+```
 
  `sess.run` is just a way to run the Tensorflow ops that we defined in the `class NN()`. The two most important ops that you will find in any neural network architecture is the forward propagation and the back propagation. Well, back propagation is just a way of updating the weights of the neural network using the chain rule on gradients. Check [this](https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/) out for a detailed analysis. In forward propagation we just use the current weights to get the  outputs.  
 
