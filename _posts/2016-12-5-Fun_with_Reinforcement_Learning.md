@@ -33,63 +33,64 @@ The above points were discovered in the famous Deepmind's Atari paper. We will g
 
 #### Tweaking the game.
 Get the `carmunk.py` from the above github link and try running it directly, it will show something like this.
-![](../images/blog2.png)
+
+![Matt's initial environment](../images/blog2.png)
 
 We just need to remove the blue obstacles and increase the number of sonar sensors to get the target configuration. Also we need to tweak the reward system as originally, Matt trained this for avoiding the obstacles but we want to home in the orange target.
 
 There are only 3 changes we need here:
 * In the `class GameState` :
 
-    ``` python
-    class GameState:
-    def __init__(self):
-        self.obstacles = [] # Just comment out the 3 obstacles.
-        # self.obstacles.append(self.create_obstacle(200, 350, 100))
-        # self.obstacles.append(self.create_obstacle(700, 200, 125))
-        # self.obstacles.append(self.create_obstacle(600, 600, 35))
-    ```
+``` python
+class GameState:
+def __init__(self):
+self.obstacles = [] # Just comment out the 3 obstacles.
+# self.obstacles.append(self.create_obstacle(200, 350, 100))
+# self.obstacles.append(self.create_obstacle(700, 200, 125))
+# self.obstacles.append(self.create_obstacle(600, 600, 35))
+```
 
 * In function `get_sonar_readings` :
 
-     ```python
-     def get_sonar_readings(self, x, y, angle):
-        # Make our arms.
-        arm_left = self.make_sonar_arm(x, y)
-        arm_middle = arm_left
-        arm_right = arm_left
+```python
+def get_sonar_readings(self, x, y, angle):
+# Make our arms.
+arm_left = self.make_sonar_arm(x, y)
+arm_middle = arm_left
+arm_right = arm_left
 
-        # Add more sonar arms for our purpose.
-        arm_left1 = arm_left
-        arm_left2 = arm_left
-        arm_right1 = arm_left
-        arm_right2 = arm_left
+# Add more sonar arms for our purpose.
+arm_left1 = arm_left
+arm_left2 = arm_left
+arm_right1 = arm_left
+arm_right2 = arm_left
 
-        # Rotate them and get readings.
-        readings.append(self.get_arm_distance(arm_left, x, y, angle, 0.75))
-        readings.append(self.get_arm_distance(arm_middle, x, y, angle, 0))
-        readings.append(self.get_arm_distance(arm_right, x, y, angle, -0.75))
+# Rotate them and get readings.
+readings.append(self.get_arm_distance(arm_left, x, y, angle, 0.75))
+readings.append(self.get_arm_distance(arm_middle, x, y, angle, 0))
+readings.append(self.get_arm_distance(arm_right, x, y, angle, -0.75))
 
-        # Readings for the extra arms that we added above for our case.
-        readings.append(self.get_arm_distance(arm_left1, x, y, angle, 0.25))
-        readings.append(self.get_arm_distance(arm_left2, x, y, angle, 0.50))
-        readings.append(self.get_arm_distance(arm_right1, x, y, angle, -0.25))
-        readings.append(self.get_arm_distance(arm_right2, x, y, angle, -0.50))
+# Readings for the extra arms that we added above for our case.
+readings.append(self.get_arm_distance(arm_left1, x, y, angle, 0.25))
+readings.append(self.get_arm_distance(arm_left2, x, y, angle, 0.50))
+readings.append(self.get_arm_distance(arm_right1, x, y, angle, -0.25))
+readings.append(self.get_arm_distance(arm_right2, x, y, angle, -0.50))
 
-        if show_sensors:
-                pygame.display.update()
+if show_sensors:
+        pygame.display.update()
 
-        return readings
-     ```
+return readings
+```
 
 * In function `car_is_crashed` :
 
-     ``` python
-     def car_is_crashed(self, readings):
-          # Since now we have 7 sensors, not 3
-          if np.min(readings) == 1:
-              return True
-          else:
-              return False
+``` python
+def car_is_crashed(self, readings):
+        # Since now we have 7 sensors, not 3
+        if np.min(readings) == 1:
+                return True
+        else:
+                return False
 ```
 
 
@@ -127,25 +128,25 @@ def frame_step(self, action):
         ...
 ```
 
- ``` python
+``` python
 def get_arm_distance(self, arm, x, y, angle, offset):
-        ...
-        ...
+...
+...
 
-    # Check if we've hit something. Return the current i (distance)
-    # if we did. If the sensor is off the screen, we treat it as if there is
-    # no obstacle.
-    if rotated_p[0] <= 0 or rotated_p[1] <= 0 \
-            or rotated_p[0] >= width or rotated_p[1] >= height:
+# Check if we've hit something. Return the current i (distance)
+# if we did. If the sensor is off the screen, we treat it as if there is
+# no obstacle.
+if rotated_p[0] <= 0 or rotated_p[1] <= 0 \
+    or rotated_p[0] >= width or rotated_p[1] >= height:
         i = i + 0# return i  # Sensor is off the screen.
-    else:
+else:
         obs = screen.get_at(rotated_p)
         if self.get_track_or_not(obs) == 1:
-            return i
+                return i
 
-        ...
-        ...
- ```
+...
+...
+```
 
  Now let us move onto the Tensorflow structure.
 
