@@ -24,7 +24,7 @@ The game should look something like this.
 
 ![Agent with sonar sensors](../images/bg_rl_1.png)
 
-To even think about creating something like this, I am grateful to Matt Harvey's [RL blog series](https://medium.com/@harvitronix/using-reinforcement-learning-in-python-to-teach-a-virtual-car-to-avoid-obstacles-6e782cc7d4c6#.ihcdue9fu) and also my friend Hardik as a source of inspiration for this work. The base code for the game can be taken from [Matt;s github link](https://github.com/harvitronix/reinforcement-learning-car/blob/master/flat_game/carmunk.py) and will serve as our starting point. He trained using Keras as the Neural Net library but I prefer Tensorflow and the other parts of the code will vary as we will see how to implement bunch of cool things like.
+To even think about creating something like this, I am grateful to Matt Harvey's [RL blog series](https://medium.com/@harvitronix/using-reinforcement-learning-in-python-to-teach-a-virtual-car-to-avoid-obstacles-6e782cc7d4c6#.ihcdue9fu) and also my friend [Hardik](http://goelhardik.github.io/) as a source of inspiration for this work. The base code for the game can be taken from [Matt's github link](https://github.com/harvitronix/reinforcement-learning-car/blob/master/flat_game/carmunk.py) and will serve as our starting point. He trained using Keras as the Neural Net library but I prefer Tensorflow and the other parts of the code will vary as we will see how to implement bunch of cool things like.
 
 * Experience Replay.
 * Epsilon Annealing.
