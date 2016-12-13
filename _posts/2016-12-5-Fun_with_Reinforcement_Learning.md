@@ -387,7 +387,7 @@ You can get the whole code from [here](https://github.com/kislayabhi/blog_code/t
 
 The results looks nice actually! After some 300 episodes, the agent just homes in the target! Perfect
 
-<iframe width="420" height="315" src="https://www.youtube.com/watch?v=h2pmw6pjONU&feature=youtu.be" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/h2pmw6pjONU" frameborder="0" allowfullscreen></iframe>
 
 The time per episode can be visualized using TensorFlow too! And it is decreasing as we expected.
 ![Graph](../images/blog_tensorflow_time_per_epoch.png)
@@ -395,11 +395,10 @@ The time per episode can be visualized using TensorFlow too! And it is decreasin
 ## Future Work.
 1. There are few inconsistencies. Check out the first few seconds of the video below. When the agents sensor is not in the reach of the target, it learns to rotate and rotate and rotate ... which is not good. Here the epsilon of 0.1 will help to breakout from this way too greedy policy. (Exploration vs Exploitation remember!) Also, this rotation can be somewhat taken care of when we make the wall visible and treat hitting as a major negative reward. Atleast then it will rotate at the center of the space and not in one corner! I will postpone that implementation for the next time.
 
-<iframe width="420" height="315" src="https://youtu.be/LX1pBTtftEg" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/LX1pBTtftEg" frameborder="0" allowfullscreen></iframe>
 
 2. What if, we take 2 agents and give both of them a set of sensors. Evader's Neural Network will be trained on avoiding the pursuer and Pursuer's Neural Net trained on hitting the evader. Would be coool. Actually I already did that ;) . Trained on only few iterations though and the results are not as good as the above. Maybe you can help me here choosing the parameters! Again you can see how, making the boundaries invisible is not helping the evader at all. I guess I need to get that soon.
 
-<iframe width="420" height="315" src="https://youtu.be/L7-nASmK4ow" frameborder="0" allowfullscreen></iframe>
-
+<iframe width="420" height="315" src="https://www.youtube.com/embed/L7-nASmK4ow" frameborder="0" allowfullscreen></iframe>
 
 Thanks for spending time here. You can replicating the 2nd part of my future work as it is quite easy once you have the current code.
