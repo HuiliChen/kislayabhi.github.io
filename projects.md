@@ -43,13 +43,14 @@ Right now:
   - [Final Report](https://drive.google.com/open?id=0B7amwNOMaX8OMVh6UERZdlc4MGc).
 - Some Results.
   - The final trained system for homing in the target.
-  <div align="center">
+  <!-- <div align="center"> -->
   <iframe width="420" height="315" src="https://www.youtube.com/embed/h2pmw6pjONU" frameborder="0" allowfullscreen></iframe>
-  </div>
+  <!-- </div> -->
 
   - The pursuer evader case. Both the agents are basically Neural Networks. Each one is training against the another. One tries to pursue and the other tries to evade.
-  <iframe style="display: inline-block;" width="420" height="315" src="https://www.youtube.com/embed/L7-nASmK4ow" frameborder="0" allowfullscreen></iframe>
-
+  <!-- <div align="center"> -->
+  <iframe " width="420" height="315" src="https://www.youtube.com/embed/L7-nASmK4ow" frameborder="0" allowfullscreen></iframe>
+  <!-- </div> -->
   - The time taken per episode as visualized on Tensorboard. It decreases as expected.
   <!-- ![Graph](images/blog_tensorflow_time_per_epoch.png) -->
   <img src="images/blog_tensorflow_time_per_epoch.png" width="700" height="315" align="center" />
