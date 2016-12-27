@@ -23,6 +23,37 @@ Right now:
 
 # Past Projects
 
+## Fast Foreground Background image segmentation on CUDA
+- This was done as a class project for course EE 5351 **Applied Parallel Programming** as a team project with my 2 other batch mates. Foreground-background separation forms an important problem with applications in real-life for video surveillance. This problem is usually solved using a formulation known as Robust Principal Component Analysis (RPCA). This generally requires solving a convex optimization problem. There are lots of algorithms that can be thrown as black boxes to solve a convex optimization problem and here we have chosen ADMM (Alternating Direction Method of Multipliers) for this purpose and have parallelized it on CUDA.
+- The SVD implemented by us on CUDA gets **26 times** speedup than CuSolver SVD for the specific tall matrices required in this problem domain. For speed benchmarks and profiling, please see the slides/report below. We are in the process of releasing the code as Open Source soon.
+- Project
+  - Final presentation [Slides](https://docs.google.com/presentation/d/1dJqLt6rFyvk_PioW58vnbbihzjxxyIgbSAsPwjfSxuA/edit?usp=sharing). (look into for speed profiling)
+  - Final [Report](https://docs.google.com/presentation/d/1dJqLt6rFyvk_PioW58vnbbihzjxxyIgbSAsPwjfSxuA/edit?usp=sharing).
+- Results
+  - Rpca profiling against Matlab implementation.
+
+  <img src="images/rpca_profiling.png" width="600" height="400" align="center" />
+
+## Exploring Deep Reinforcement Learning
+
+- This was done as a class project for the research level course CSCI 8980 **Geometric Optimizations in Robotics**. This project encapsulated getting acquainted with the current Reinforcement Learning literature and apply them over some real world problems. In our case, this problem can be divided into two parts wherein we had to survey and  implement the current discreet and continuous action domain RL literature and also to build the robotics simulation environment for carrying out the training part. While we had some success in each of them, due to time restraint we were not able to combine the learning part with the environment. However, our results can become a good starting point for any further work in this domain.
+- Project
+  - Deep Deterministic Policy Gradient [Slides](https://drive.google.com/file/d/0B7amwNOMaX8OaXQ3Z2d0eVVBX0k/view?usp=sharing) that I prepared and presented.
+  - The [blog post](http://kislayabhi.github.io/Fun_with_Reinforcement_Learning/) and [code](https://github.com/kislayabhi/blog_code/tree/master/rl-car) that came out of this.
+  - [Final Report](https://drive.google.com/open?id=0B7amwNOMaX8OMVh6UERZdlc4MGc).
+- Some Results.
+  - The final trained system for homing in the target.
+  <div align="center">
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/h2pmw6pjONU" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  - The pursuer evader case. Both the agents are basically Neural Networks. Each one is training against the another. One tries to pursue and the other tries to evade.
+  <iframe style="display: inline-block;" width="420" height="315" src="https://www.youtube.com/embed/L7-nASmK4ow" frameborder="0" allowfullscreen></iframe>
+
+  - The time taken per episode as visualized on Tensorboard. It decreases as expected.
+  <!-- ![Graph](images/blog_tensorflow_time_per_epoch.png) -->
+  <img src="images/blog_tensorflow_time_per_epoch.png" width="700" height="315" align="center" />
+
 ## Orchard Map Reconstruction using Strucure from Motion.
 
 - This was done as a class project under Professor Stergios Roumeliotis for the course CSCI 5552 **Sensing and Estimation in Robotics**. In this project, we designed a system to build the dense map of a row of apple trees. The main sensors involved are Velodyne and Garmin. The fusion of sparse image features and dense laser points aims to estimate the position and orientation of the two sensors and retrieve the absolute scale of the reconstructed apple trees.
@@ -44,10 +75,10 @@ Right now:
    - [Final Report](https://drive.google.com/file/d/0ByM6ForkyNZfOTJDeUxNclA5ZGs/view?usp=sharing)
 
 
+## IPython Notebooks
+
 IPython notebooks are a great way to learn python. Herein, I have developed some lucid notebooks showcasing a mixture of Computer Vision and Machine Learning techniques!
 Check these out and write your own! :)
-
-## IPython Notebooks
 
 ### 1. Automatic Number Plate Recognition
 
