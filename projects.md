@@ -29,8 +29,8 @@ Right now:
 
 - Project
 
-        - [Proposal](https://drive.google.com/open?id=0B7amwNOMaX8OdVlLRVJGNWhTMzA)
-        - [Final Report](https://drive.google.com/open?id=0B7amwNOMaX8OMUtreVdTMVFSaE0)
+  - [Proposal](https://drive.google.com/open?id=0B7amwNOMaX8OdVlLRVJGNWhTMzA)
+  - [Final Report](https://drive.google.com/open?id=0B7amwNOMaX8OMUtreVdTMVFSaE0)
 
 
 ## How much did it rain 2 [Kaggle]
