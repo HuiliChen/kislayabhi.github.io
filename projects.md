@@ -51,6 +51,7 @@ Right now:
   <!-- <div align="center"> -->
   <iframe " width="420" height="315" src="https://www.youtube.com/embed/L7-nASmK4ow" frameborder="0" allowfullscreen></iframe>
   <!-- </div> -->
+  
   - The time taken per episode as visualized on Tensorboard. It decreases as expected.
   <!-- ![Graph](images/blog_tensorflow_time_per_epoch.png) -->
   <img src="images/blog_tensorflow_time_per_epoch.png" width="700" height="315" align="center" />
