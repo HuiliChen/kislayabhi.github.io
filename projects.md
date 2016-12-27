@@ -48,13 +48,12 @@ Right now:
   <!-- </div> -->
 
   - The pursuer evader case. Both the agents are basically Neural Networks. Each one is training against the another. One tries to pursue and the other tries to evade.
-  <!-- <div align="center"> -->
+
   <iframe " width="420" height="315" src="https://www.youtube.com/embed/L7-nASmK4ow" frameborder="0" allowfullscreen></iframe>
-  <!-- </div> -->
-  
+
   - The time taken per episode as visualized on Tensorboard. It decreases as expected.
   <!-- ![Graph](images/blog_tensorflow_time_per_epoch.png) -->
-  <img src="images/blog_tensorflow_time_per_epoch.png" width="700" height="315" align="center" />
+  <img src="../images/blog_tensorflow_time_per_epoch.png" width="700" height="315" align="center" />
 
 ## Orchard Map Reconstruction using Strucure from Motion.
 
