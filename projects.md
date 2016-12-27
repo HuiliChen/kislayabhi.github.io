@@ -39,9 +39,9 @@ Right now:
 
 - Project
 
-        - [Proposal](https://drive.google.com/file/d/0ByM6ForkyNZfeEdNM1dSeDJTakE/view?usp=sharing)
-        - [Progress Report](https://drive.google.com/file/d/0ByM6ForkyNZfNXJVamhfRHoyalk/view?usp=sharing)
-        - [Final Report](https://drive.google.com/file/d/0ByM6ForkyNZfOTJDeUxNclA5ZGs/view?usp=sharing)
+   - [Proposal](https://drive.google.com/file/d/0ByM6ForkyNZfeEdNM1dSeDJTakE/view?usp=sharing)
+   - [Progress Report](https://drive.google.com/file/d/0ByM6ForkyNZfNXJVamhfRHoyalk/view?usp=sharing)
+   - [Final Report](https://drive.google.com/file/d/0ByM6ForkyNZfOTJDeUxNclA5ZGs/view?usp=sharing)
 
 
 IPython notebooks are a great way to learn python. Herein, I have developed some lucid notebooks showcasing a mixture of Computer Vision and Machine Learning techniques!
