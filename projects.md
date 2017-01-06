@@ -28,7 +28,7 @@ Right now:
 - The SVD implemented by us on CUDA gets **26 times** speedup than CuSolver SVD for the specific tall matrices required in this problem domain. For speed benchmarks and profiling, please see the slides/report below. We are in the process of releasing the code as Open Source soon.
 - Project
   - Final presentation [Slides](https://docs.google.com/presentation/d/1dJqLt6rFyvk_PioW58vnbbihzjxxyIgbSAsPwjfSxuA/edit?usp=sharing). (look into for speed profiling)
-  - Final [Report](https://docs.google.com/presentation/d/1dJqLt6rFyvk_PioW58vnbbihzjxxyIgbSAsPwjfSxuA/edit?usp=sharing).
+  - Final [Report](https://drive.google.com/file/d/0B7amwNOMaX8OM1JBX2RFQ3lncUE/view?usp=sharing).
 - Results
   - Rpca profiling against Matlab implementation.
   <img src="../images/rpca_profiling.png" width="600" height="400" align="center" />
