@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fun with Reinforcement Learning Part 1 (Q learning)
+title: Python Game using Q Learning and Tensorflow
 published: true
 comments: true
 ---
